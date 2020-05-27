@@ -1,5 +1,5 @@
 .DS_Store
-in/
-out/
+_in/
+_out/
 .ipynb_checkpoints/
 .env

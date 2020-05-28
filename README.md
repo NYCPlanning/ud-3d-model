@@ -13,3 +13,17 @@ Over time, we'll want to have these available in a centrally hosted location.
 
 - [DOITT 3D Building Model](https://github.com/CityOfNewYork/nyc-geo-metadata/blob/master/Metadata/Metadata_3DBuildingModel.md)
 - [DOITT NYC Planimetrics](https://github.com/CityOfNewYork/nyc-planimetrics/blob/master/Capture_Rules.md)
+
+## Using the Scripts
+
+Provide a `.env` file defining the following variables in the repository root:
+
+- PG_HOST
+- PG_PORT
+- PG_NAME
+- PG_USER
+- PG_PASSWORD
+
+These variables are used in the included Jupyter notebooks as well as shell scripts provided under `scripts`. After running `$ set -o allexport; source ./.env; set +o allexport` to source the variables, you can then run either `pg_backup.sh` or `pg_restore.sh` like so:
+
+`$ zsh ./scripts/pg_backup.sh /path/to/backup.dump`
